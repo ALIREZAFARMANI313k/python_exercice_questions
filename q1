@@ -1,0 +1,32 @@
+#Author:alireza farmani
+
+def calculate_mean(numbers):
+                          محاسبه میانگین اعداد #
+return sum(numbers) / len(numbers)
+def calculate_variance(numbers):
+                          محاسبه واریانس اعداد #
+mean = calculate_mean(numbers)
+squared_diff = [(x - mean) ** 2 for x in numbers] # میانگین با عدد هر اختالف مربع
+return sum(squared_diff) / len(numbers)
+def main():
+numbers = []
+                          دریافت ورودیها از کاربر #
+for i in range(5):
+while True:
+try:
+num = float(input(f"Enter number {i+1} (between 0 and 1): "))
+if 0 <= num <= 1:
+numbers.append(num)
+break
+else:
+print("Number must be between 0 and 1.")
+except ValueError:
+print("Please enter a valid number.")
+                          محاسبه میانگین و واریانس #
+mean = calculate_mean(numbers)
+variance = calculate_variance(numbers)
+                           چاپ میانگین و واریانس #
+print(f"Mean: {mean}")
+print(f"Variance: {variance}")
+if __name__ == "__main__":
+main()
