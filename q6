@@ -1,0 +1,12 @@
+Author:alireza farmani
+
+حل معادالت برای محاسبه تعداد مرغ و خرگوش #
+
+for y in range(36):
+x = 35 - y
+if 2 * x + 4 * y == 94:
+break
+چاپ نتایج #
+
+print("number of chickens:", x)
+print("number of rabbits", y)
