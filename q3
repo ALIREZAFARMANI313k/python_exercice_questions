@@ -1,0 +1,35 @@
+#author: alireza farmani
+
+def taiid_ramz(password):
+tool_ramz_sharaiet = 8 <= len(password) <= 12
+harf_koochik_sharaiet = any(char.islower() for char in password)
+harf_bozorg_sharaiet = any(char.isupper() for char in password)
+sharaiet_ragham = any(char.isdigit() for char in password)
+horof_khas_sharaiet = any(char in '@#' for char in password)
+barresi_sharaietha = [ ]
+if tool_ramz_sharaiet:
+
+barresi_sharaietha.append("tool ramz raaiat shode ast.")
+if harf_koochik_sharaiet:
+
+barresi_sharaietha.append("haddaghal yek harf koochik.")
+if harf_bozorg_sharaiet:
+
+barresi_sharaietha.append("haddaghal yek harf bozorg.")
+if sharaiet_ragham:
+
+barresi_sharaietha.append("haddaghal yek ragham.")
+if horof_khas_sharaiet:
+
+barresi_sharaietha.append("hadaghal yeki az horof khas @ ya #")
+return barresi_sharaietha
+password = input("Please enter your password: ")
+result = taiid_ramz(password)
+if result:
+
+print("ramz shoma sharayet zir ra darad:")
+for condition in result:
+print(f"- {condition}")
+else:
+
+print("ramz shoma sharaiet lazem ra nadarad.")
