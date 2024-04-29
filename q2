@@ -1,0 +1,22 @@
+#author: alireza farmani
+
+def count_letters(text):
+                  ایجاد یک دیکشنری برای نگهداری تعداد هر حرف #
+letter_count = {}
+                           حلقه بر روی تمام حروف موجود در متن #
+for char in text:
+
+اگر حرف در دیکشنری وجود داشته باشد، تعداد آن را یکی افزایش میدهیم #
+
+if char.isalpha():
+تبدیل حرف به حروف کوچک # ()lower.char = char
+letter_count[char] = letter_count.get(char, 0) + 1
+return letter_count
+                                           دریافت متن از کاربر #
+(" :لطفا متن انگلیسی خود را وارد کنید ً ")input = text
+                               محاسبه تعداد حروف موجود در متن #
+result = count_letters(text)
+                                                     چاپ نتیجه #
+for letter, count in sorted(result.items()):
+
+print(f"حرف تعداد}' letter}': {count}")
